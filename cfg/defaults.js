@@ -15,8 +15,7 @@ const dfltPort = 8000;
  * @return {Object}
  */
 function getDefaultModules() {
-  return {
-    preLoaders: [
+  return {preLoaders: [
       {
         test: /\.(js|jsx)$/,
         include: srcPath,
@@ -45,7 +44,7 @@ function getDefaultModules() {
         loader: 'style-loader!css-loader!stylus-loader'
       },
       {
-        test: /\.(png|jpg|gif|woff|woff2)$/,
+        test: /\.(png|jpg|gif|woff|woff2|svg|eot|ttf)$/,
         loader: 'url-loader?limit=8192'
       },
       {
